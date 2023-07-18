@@ -1,6 +1,3 @@
-This is Marvel information portal application. To start this application on your PC you can copy this repo and init 'npm install' and then 'npm start'. This application is using React and official Marvel free API. 
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

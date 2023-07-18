@@ -4,8 +4,6 @@
     &__header {
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        justify-items: center;
     }
     &__title {
         font-weight: bold;
@@ -28,14 +26,6 @@
                     color: $main-color;
                 }
             }
-        }
-    }
-}
-
-@media(max-width:530px) {
-    .app {
-        &__header {
-            flex-direction: column;
         }
     }
 }
