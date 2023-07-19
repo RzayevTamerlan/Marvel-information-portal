@@ -32,6 +32,7 @@ const useMarvelService = () => {
 	};
 
 	const _transformCharacter = (char) => {
+		console.log(char)
 		return {
 			id: char.id,
 			name: char.name,
@@ -51,7 +52,7 @@ const useMarvelService = () => {
 			title: comics.title,
 			description: comics.description || "There is no description",
 			pageCount: comics.pageCount
-				? `${comics.pageCount} p.`
+				? `${comics.pageCount} pages`
 				: "No information about the number of pages",
 			thumbnail: comics.thumbnail.path + "." + comics.thumbnail.extension,
 			language: comics.textObjects[0]?.language || "en-us",

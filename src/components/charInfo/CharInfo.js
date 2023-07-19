@@ -7,6 +7,7 @@ import ErrorMessage from '../errorMessage/ErrorMessage';
 import Skeleton from '../skeleton/Skeleton';
 
 import './charInfo.scss';
+import { Link } from 'react-router-dom';
 
 const CharInfo = (props) => {
 
@@ -80,12 +81,14 @@ const View = ({char}) => {
                 {comics.length > 0 ? null : 'There is no comics with this character'}
                 {
                     comics.map((item, i) => {
-                        // eslint-disable-next-line
+                        const comicid = item.resourceURI.slice(-5)
                         if (i > 9) return;
                         return (
-                            <li key={i} className="char__comics-item">
-                                {item.name}
-                            </li>
+                            <Link className="char__comics-item" key={i} to={`/comics/${comicid}`}>
+                                <li >
+                                    {item.name}
+                                </li>
+                            </Link>
                         )
                     })
                 }                
