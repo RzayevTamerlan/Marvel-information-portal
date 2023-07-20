@@ -3,10 +3,11 @@
         margin-top: 45px;
     }
     &__grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, 225px);
-        justify-content: space-between;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         row-gap: 55px;
+        column-gap: 30px;
     }
     &__item {
         transition: 0.3s transform;

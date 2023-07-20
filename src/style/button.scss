@@ -28,7 +28,7 @@
             content: "";
             display: block;
             position: absolute;
-            left: 0;
+            left: 1px;
             top: -10px;
             transition: none;
         }
@@ -39,13 +39,15 @@
             content: "";
             display: block;
             position: absolute;
-            right: 0;
+            right: 1px;
             bottom: -10px;
             transform: rotate(180deg);
             transition: none;
         }
     }
     &__main, &__secondary {
+        position: relative;
+        z-index: 100;
         &:hover {
             color: #fff;
         }
@@ -91,4 +93,32 @@
     &:disabled {
         filter: grayscale(.5);
     }
+}
+
+
+
+@media(max-width:540px) {
+    .button {
+        &__main, &__secondary {
+            position: relative;
+            z-index: 100;
+            &:hover {
+                color: #fff;
+            }
+        }
+        &__secondary {
+            margin-top: 10px;
+            .inner {
+                background-color: $grey;
+                &::before {
+                    border-color: $grey transparent;
+                    transition: none;
+                }
+                &::after {
+                    border-color: $grey transparent; 
+                    transition: none;
+                }
+            }
+        }
+}
 }

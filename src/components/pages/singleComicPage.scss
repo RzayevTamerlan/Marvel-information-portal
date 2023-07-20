@@ -32,8 +32,40 @@
         font-weight: bold;
         font-size: 18px;
         line-height: 24px;
+        background-color: #9F0013;
+        padding: 20px 30px;
+        border-radius: 20px;
+        transition: 0.5s all;
+        color: #fff;
         &:hover {
-            color: $main-color;
+            transform: scale(1.05);
+            transition: 0.5s all;
+            color: #fff;
+        }
+    }
+}
+
+@media(max-width:1030px) {
+    .single-comic {
+        margin-top: 50px;
+        display: flex;
+    }
+}
+
+@media(max-width:750px) {
+    .single-comic {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        &__info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin: 20px 0px;
         }
     }
 }
