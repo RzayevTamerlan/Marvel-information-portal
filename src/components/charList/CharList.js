@@ -73,7 +73,6 @@ const CharList = (props) => {
                 </li>
             )
         });
-        console.log(items);
         return (
             <ul className="char__grid">
                 {items}

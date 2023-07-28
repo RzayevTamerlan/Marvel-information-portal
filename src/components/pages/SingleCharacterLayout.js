@@ -21,7 +21,6 @@ const SingleCharacterLayout = () => {
   const onCharLoaded = (char) => {
     setChar(char[0]);
   };
-  console.log(char);
   const spinner = loading ? <Spinner /> : null;
   const content = !(loading || !char) ? <View char={char}></View> : null;
   return (
